@@ -11,26 +11,26 @@ function makeRows(rows, cols) {
 
 makeRows(16, 16);
 
-
-
 const randomColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+
 const gridItem = document.querySelector('.grid-item');
 
 document.documentElement.style.setProperty('--main-bg-color', randomColor);
 
-container.addEventListener('mouseover', (e) => {
+container.addEventListener('mouseover', () => {
     if (event.target.matches('div')) {
         event.target.classList.add('hovering');
     }
 })
+
 
 const button = document.querySelector('input');
 button.addEventListener('click', updateGridSize);
 
 function updateGridSize() {
     const newGridSize = window.prompt("New grid size");
-    if (newGridSize >= 101) {
-        window.alert('Invalid number. Max limit: 100')
+    if (newGridSize >= 65) {
+        window.alert('Invalid number. Max limit: 64')
     }
     else {
         makeRows(newGridSize, newGridSize);
