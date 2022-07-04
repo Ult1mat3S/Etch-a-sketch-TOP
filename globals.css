@@ -4,6 +4,9 @@
 }
 
 #container {
+    height: 800px;
+    max-width: 1000px;
+    overflow: auto;
     display: grid;
     grid-gap: 0;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -11,13 +14,9 @@
 }
 
 .grid-item {
+    height: auto;
+    width: auto;
     padding: 1em;
     border: 1px solid #ddd;
-    text-align: center;
-}
-
-input {
-    padding: 3px;
-    margin-top: 5px;
-    margin-bottom: -10px;
+    /* text-align: center; */
 }
