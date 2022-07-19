@@ -13,6 +13,9 @@
 <body>
   <h1>Etch-A-Sketch</h1>
   <input type="button" value="New grid size" onclick="updateGridSize()">
+  <input type="button" value="Reset" onclick="resetGrid()">
+  <input type="button" value="Rainbow mode" onclick="toggleRainbowMode()">
+  <input type="color" id="color" name="color" value="#000000" oninput="selectColor( this )">
   <br>
   <br>
   <div id="container">
